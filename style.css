@@ -1,22 +1,63 @@
 body{
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    align-items: center;
     justify-content: center;
-
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
-ul{
-    margin: 1rem 0;
-    padding:0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap:1rem;
+.canvas{
+    background-color: rgb(42, 132, 235);
+    width: 400px;
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 1px 1px 1px rgb(31, 96, 170);
 }
 
 .display{
     text-align: right;
-    margin: 2rem;
+    background-color: rgb(222, 240, 218);
+    padding: 25px;
+    border: 2px black solid;
+    border-radius: 5px;
     height: 20px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button{
+    padding:20px;
+    border: 2px black solid;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(31, 96, 170);
+    font-weight: bold;
+    box-shadow: 0px 2px 1px 1px #000000;
+}
+
+#equals{
+  grid-column: span 2;
+}
+.redButton{
+    background-color: rgb(230, 100, 100);
+    color:white;
+    font-weight: bold;
+}
+
+#clear:active, #back:active,.operands:active, #equals:active{
+    background-color: rgb(255, 255, 255);
+}
+.numerals:active{
+    background-color: rgb(230, 100, 100);
 }
